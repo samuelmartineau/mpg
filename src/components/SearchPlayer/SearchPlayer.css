@@ -1,0 +1,6 @@
+.SearchPlayer__autocomplete {
+  margin: 1em 0;
+  border: 1px solid black;
+  background: rgba(12, 177, 181, 0.3);
+  padding: 1em;
+}

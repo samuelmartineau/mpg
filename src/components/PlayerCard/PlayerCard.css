@@ -1,0 +1,31 @@
+.PlayerCard {
+  max-width: 300px;
+  padding: 1em;
+}
+
+.PlayerCard__item + .PlayerCard__item {
+  border-top: 1px solid black;
+}
+
+.PlayerCard__item {
+  background: white;
+}
+
+.PlayerCard__item--highlighted {
+  background: hsl(200, 50%, 50%);
+  color: white;
+}
+
+.PlayerCard__container {
+  border: 1px solid black;
+  margin: auto;
+  max-width: 300px;
+}
+
+.PlayerCard__name {
+
+}
+
+.PlayerCard__club {
+
+}
