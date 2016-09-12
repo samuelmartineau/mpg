@@ -36,7 +36,7 @@ class App extends Component {
           )}
         </div>
         <div><Link to="/leagues">Leagues</Link></div>
-        <div><Link to="/searchPlayer">Seach Player</Link></div>
+        <div><Link to="/searchPlayer">Search Player</Link></div>
         {this.props.children || <p>You are {!this.state.loggedIn && 'not'} logged in.</p>}
       </div>
     );
