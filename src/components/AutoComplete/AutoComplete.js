@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Autocomplete from 'react-autocomplete';
+import uuid from 'uuid';
+import classNames from 'classnames';
 import {debounce} from 'lodash';
 import './AutoComplete.css';
 
@@ -42,9 +44,9 @@ class AutoComplete extends Component {
       const highlightClass = isHighlighted
           ? this.props.itemClassName + '--highlighted'
           : '';
-        var className = [this.props.itemClassName, highlightClass].join(' ');
+      const classes = classNames(this.props.itemClassName, highlightClass, 'mpg-autocomplete-item');
         return (
-            <div className={className} key={item.id}>{this.props.displayContentItem(item)}</div>
+            <div className={classes} key={uuid.v1()}>{this.props.displayContentItem(item)}</div>
         );
     }
 
@@ -52,8 +54,8 @@ class AutoComplete extends Component {
         return (
             <div className={this.props.menuClassName}>
                 {searchInput === ''
-                    ? <div>{this.props.hintText}</div>
-                    : items
+                    ? <div className="mpg-autocomplete-hintText" ref="autocomplete-hintText">{this.props.hintText}</div>
+                  : items
                   }
             </div>
         );
@@ -78,11 +80,11 @@ class AutoComplete extends Component {
 
 AutoComplete.propTypes = {
     hintText: PropTypes.string.isRequired,
-    debounceTime: PropTypes.number,
     displayContentItem: PropTypes.func.isRequired,
-    onItemClicked: PropTypes.func,
-    onClearSelection: PropTypes.func,
     filterFunc: PropTypes.func.isRequired,
+    onItemClicked: PropTypes.func.isRequired,
+    debounceTime: PropTypes.number,
+    onClearSelection: PropTypes.func,
     defaultSelectedItems: PropTypes.array
 }
 
