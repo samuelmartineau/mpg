@@ -35,7 +35,6 @@ class App extends Component {
             <Link to="/login">Sign in</Link>
           )}
         </div>
-        <div><Link to="/leagues">Leagues</Link></div>
         <div><Link to="/searchPlayer">Search Player</Link></div>
         {this.props.children || <p>You are {!this.state.loggedIn && 'not'} logged in.</p>}
       </div>
