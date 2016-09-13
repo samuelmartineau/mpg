@@ -26,7 +26,7 @@ class AutoComplete extends Component {
     }
 
     onInputSearchChange = (evt, value) => {
-        this.setState({searchInput: value, loading: true});
+        this.setState({searchInput: value});
         this.filterItems(value);
     }
 
@@ -50,6 +50,10 @@ class AutoComplete extends Component {
         );
     }
 
+    debouncedMeny = (items) => {
+
+    }
+
     renderMenu = (items, searchInput) => {
         return (
             <div className={this.props.menuClassName}>
@@ -67,7 +71,7 @@ class AutoComplete extends Component {
                 {this.state.selectedItem
                     ? <div className="autocomplete__selected">
                             <div>{this.props.displayContentItem(this.state.selectedItem)}</div>
-                            <button onClick={this.clearSelection}>x</button>
+                            <button type="button" onClick={this.clearSelection}>x</button>
                         </div>
                     : <Autocomplete ref="autocomplete" value={this.state.searchInput} inputProps={{
                         name: 'autocomplete'

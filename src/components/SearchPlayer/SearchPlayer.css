@@ -4,3 +4,17 @@
   background: rgba(12, 177, 181, 0.3);
   padding: 1em;
 }
+
+.SearchPlayer__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchPlayer__resultCard {
+  padding: 1em;
+}
+
+.SearchPlayer__resultCardLeague {
+  color: grey;
+}

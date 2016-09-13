@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
-import './index.css';
+import './common/index.css';
+import './common/card.css';
 import Router from './Router';
 
 ReactDOM.render(

@@ -1,25 +1,25 @@
 .PlayerCard {
   max-width: 300px;
   padding: 1em;
+  cursor: pointer;
 }
 
 .PlayerCard__item + .PlayerCard__item {
-  border-top: 1px solid black;
+
 }
 
 .PlayerCard__item {
-  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.PlayerCard__item--highlighted {
-  background: hsl(200, 50%, 50%);
-  color: white;
+.PlayerCard__item--highlighted > .PlayerCard, .PlayerCard:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .PlayerCard__container {
-  border: 1px solid black;
-  margin: auto;
-  max-width: 300px;
+  text-align: center;
 }
 
 .PlayerCard__name {
