@@ -1,0 +1,9 @@
+.slick-prev:before, .slick-next:before, .slick-dots li button:before {
+  color: #26a69a;
+}
+
+.slick-slider {
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+}

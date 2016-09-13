@@ -60,7 +60,7 @@ class SearchPlayer extends Component {
                     </div>
                 )}
                 {this.state.playerSelected && this.state.players.length === 0 && (
-                    <div>Not bought</div>
+                    <div>Not purchased</div>
                 )}
             </div>
         );

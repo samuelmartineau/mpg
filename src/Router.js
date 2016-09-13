@@ -16,11 +16,20 @@ function requireAuth(nextState, replace) {
   }
 }
 
+function onlyNotAuth(nextState, replace) {
+  if (loggedIn()) {
+    replace({
+      pathname: '/',
+      state: {}
+    })
+  }
+}
+
 const router = (
   <Router history={browserHistory}>
       <Route path="/" component={App}>
           <IndexRoute component={Home} />
-          <Route path="login" component={Login}/>
+          <Route path="login" component={Login} onEnter={onlyNotAuth}/>
           <Route path="searchPlayer" component={SearchPlayer} onEnter={requireAuth} />
           <Route path="*" component={NoMatch}/>
       </Route>

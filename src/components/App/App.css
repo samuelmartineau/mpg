@@ -8,6 +8,7 @@
 }
 
 .App-header {
+  display: block;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -16,6 +17,26 @@
 
 .App-intro {
   font-size: large;
+}
+
+.App__searchLink {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes App-logo-spin {
