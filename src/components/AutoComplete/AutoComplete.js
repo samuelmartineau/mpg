@@ -70,7 +70,7 @@ class AutoComplete extends Component {
             <div className={this.props.containerClassName}>
                 {this.state.selectedItem
                     ? <div className="autocomplete__selected">
-                            <div>{this.props.displayContentItem(this.state.selectedItem)}</div>
+                            <div className="autocomplete__selectedContainer">{this.props.displayContentItem(this.state.selectedItem)}</div>
                             <button type="button" onClick={this.clearSelection}>x</button>
                         </div>
                     : <Autocomplete ref="autocomplete" value={this.state.searchInput} inputProps={{

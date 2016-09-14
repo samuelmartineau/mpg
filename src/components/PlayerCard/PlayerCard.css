@@ -1,7 +1,7 @@
 .PlayerCard {
   max-width: 300px;
-  padding: 1em;
   cursor: pointer;
+  flex: 1;
 }
 
 .PlayerCard__item + .PlayerCard__item {
@@ -23,9 +23,9 @@
 }
 
 .PlayerCard__name {
-
+  font-size: 1em;
 }
 
 .PlayerCard__club {
-
+  font-size: 0.8em;
 }
