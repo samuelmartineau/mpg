@@ -1,21 +1,11 @@
 import React, {Component} from 'react';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './Home.css';
-import Slider from 'react-slick';
+import Carousel from 'nuka-carousel';
 import presentation from './presentation.jpg';
 import joy from './joy.jpg';
 import doubt from './doubt.jpg';
 import relief from './relief.jpg';
 import SliderCard from '../SliderCard/SliderCard';
-
-const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-};
 
 class Home extends Component {
 
@@ -23,7 +13,7 @@ class Home extends Component {
         return (
             <div>
                 <h2>Tell me who has purchased him now!!!</h2>
-                <Slider {...settings}>
+                <Carousel fixedHeight={false}>
                     <div>
                       <SliderCard title="Let's talk about this group of 3 MPG players watching a soccer game on TV." image={presentation}/>
                     </div>
@@ -36,7 +26,7 @@ class Home extends Component {
                     <div>
                       <SliderCard title="And yeahhh, they find it instantly!!! the scorer didn't play against them." image={relief}/>
                     </div>
-                </Slider>
+                </Carousel>
             </div>
         );
     }

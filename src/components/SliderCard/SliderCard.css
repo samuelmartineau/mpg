@@ -4,3 +4,12 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.SliderCard__image {
+  width: 100%;
+  max-width: 450px;
+}
+
+.SliderCard__title {
+  font-size: 1em;
+}

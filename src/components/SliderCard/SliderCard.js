@@ -4,8 +4,8 @@ import './SliderCard.css';
 const SliderCard = ({title, image}) => {
     return (
         <div className="SliderCard">
-          <img src={image} alt="logo" />
-          <h3>{title}</h3>
+          <img className="SliderCard__image" src={image} alt="logo" />
+          <h3 className="SliderCard__title">{title}</h3>
         </div>
     );
 }
